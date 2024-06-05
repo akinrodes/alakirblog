@@ -1,4 +1,4 @@
-# Nigiri Template 🍣
+# Alakir Template 🍣
 
 <!-- toc -->
 
@@ -30,7 +30,7 @@
 
 ## Introduction
 
-The Nigiri template allows you to create a personalized blog with ease. The configuration of the blog is managed through a YAML file named `configuration.yaml` located in the main directory. This documentation provides details on the available configuration options and their usage.
+The Alakir template allows you to create a personalized blog with ease. The configuration of the blog is managed through a YAML file named `configuration.yaml` located in the main directory. This documentation provides details on the available configuration options and their usage.
 
 ## Configuration Options (type, default)
 
@@ -125,8 +125,8 @@ Configure the visual appearance of the blog & more
 
 ```yaml
 # configuration.yml
-site_title: 'Nigiri'
-site_description: 'Demo version of Nigiri Next.js Template'
+site_title: 'Alakir'
+site_description: 'Demo version of Alakir Next.js Template'
 name: 'John'
 surname: 'Doe'
 professional_identity: 'Proffessional Magician'
