@@ -14,26 +14,7 @@ date: '2024-06-24'
 
 # Installation sur CentOS
 
-Ici nous allons apprendre Ã  installer© Ansible sur diffÃrents systÃmes Linux
-
-# Why specifically Alacritty?
-
-Alacritty is fast terminal & highly customizable terminal built on Rust with a strong, growing community. That's all we need! :D
-
-# Alacritty
-
-Let's install and configure Alacritty then ðŸ˜‰
-
-## Installation
-
-- Arch:
-  ```bash
-  $ yay -S alacritty
-  ```
-- Fedora:
-  ```bash
-  $ sudo dnf install alacritty
-  ```
+Ici nous allons apprendre Ã  installer Ansible sur divers OS Linux
 
 ## Installation d'Ansible sur CentOS
 
@@ -50,14 +31,55 @@ Let's install and configure Alacritty then ðŸ˜‰
   $ sudo yum install -y epel-release
   ```
 
-  
+## Decouvrir les commandes AD-HOC
+
+  ```bash
+  cat hosts
+  10.0.0.4 ansible_user=admin ansible_password=admin ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+  10.0.0.5 ansible_user=admin ansible_password=admin ansible_ssh_common_args='-o StrictHostKeyChecking=no'
 
 
+  ping command
+  ansible -i hosts all -m ping
 
 
-```bash
-  $ sudo nano ~/.config/alacritty/alacritty.yml
+  create file command
+  ansible -i hosts all -m copy -a "dest=/home/admin/toto.txt content='bonjour eazytraining'"
+
+
+  setup command
+  ansible -i hosts all -m setup  
+
   ```
+
+##Decouvrir l'inventaire au format Yaml(Bonnne pratique de securite , toujours mettre une extension aux fichiers:
+
+  cat hosts
+  ```bash
+  all:
+    hosts:
+      10.0.0.4:
+        ansible_user: admin
+        ansible_password: admin
+        ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
+      10.0.0.5:
+        ansible_user: admin
+        ansible_password: admin
+        ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
+
+  ```
+  
+  Tests:
+  ```bash
+  ping command
+  ansible -i hosts all -m ping
+
+
+  create file command
+  ansible -i hosts all -m copy -a "dest=/home/admin/toto.txt content='bonjour eazytraining'"
+
+  ```
+
 
 - Then, add the following (adjust the font and size if needed):
 
