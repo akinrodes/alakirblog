@@ -1,5 +1,5 @@
 ---
-title: 'Installation Ansible Ubuntu, Debian , CentOS'
+title: 'On d�marre notre voyage avec Ansible'
 date: '2024-06-24'
 ---
 
@@ -12,9 +12,21 @@ date: '2024-06-24'
 
 </div>
 
-# Installation sur CentOS
+# Installlation, premiers playbooks
 
-Ici nous allons apprendre à installer Ansible sur divers OS Linux
+Ici nous allons apprendre à installer Ansible sur divers OS Linux, à ecrire des playbooks , à mettre en place des projets de depliement et tests.
+
+
+## Installation d'Ansible sur Ubuntu, Debian 
+  
+  ```bash
+  sudo apt install -y gnupg2
+  echo 'deb http://ppa.launchpad.net/ansible/ansible/ubuntu trusty main' | sudo tee -a /etc/apt/sources.list
+  sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367
+  sudo apt update
+  sudo apt install -y ansible
+  ```
+
 
 ## Installation d'Ansible sur CentOS
 
